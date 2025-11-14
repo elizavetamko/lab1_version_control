@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 5 — CSS Анімації</title>
+    <style>
+        /* Анімація: зміна кольору тексту */
+        @keyframes colorChange {
+            0% { color: red; }
+            50% { color: blue; }
+            100% { color: green; }
+        }
+
+        h1 {
+            animation-name: colorChange;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Приклад 1: Зміна кольору тексту</h1>
+
+    <h2>Приклад 2: Переміщення блоку</h2>
+
+<div class="moving-box"></div>
+
+<style>
+    .moving-box {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        position: relative;
+        animation-name: moveRight;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes moveRight {
+        from {
+            left: 0;
+        }
+        to {
+            left: 400px;
+        }
+    }
+</style>
+
+<h2>Приклад 3: Масштабування елемента</h2>
+
+<div class="scaling-box"></div>
+
+<style>
+    .scaling-box {
+        width: 100px;
+        height: 100px;
+        background-color: #4CAF50;
+        margin-bottom: 20px;
+        animation-name: scalePulse;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes scalePulse {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.5);
+        }
+    }
+</style>
+
+<h2>Приклад 4: Обертання елемента</h2>
+
+<div class="rotating-box"></div>
+
+<style>
+    .rotating-box {
+        width: 100px;
+        height: 100px;
+        background-color: #2196F3;
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; /* рівномірне обертання */
+        margin-bottom: 20px;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<h2>Приклад 5: Прозорість (зникання)</h2>
+
+<div class="fading-box"></div>
+
+<style>
+    .fading-box {
+        width: 100px;
+        height: 100px;
+        background-color: #9C27B0;
+        animation-name: fadeInOut;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes fadeInOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+</style>
+
+
+</body>
+</html>
